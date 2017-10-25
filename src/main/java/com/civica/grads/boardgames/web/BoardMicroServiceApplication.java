@@ -1,8 +1,5 @@
 package com.civica.grads.boardgames.web;
 
-import com.civica.grads.boardgames.display.StringBufferBoardRenderer;
-import com.civica.grads.boardgames.exceptions.GameSetupException;
-import com.civica.grads.boardgames.interfaces.Renderer;
 import com.civica.grads.boardgames.model.Board;
 
 import org.springframework.boot.SpringApplication;
