@@ -3,7 +3,9 @@
  */
 package com.civica.grads.boardgames.web.model;
 
-import com.civica.grads.boardgames.model.Board;
+import com.civica.grads.boardgames.model.GameBoard;
+import com.civica.grads.boardgames.interfaces.Board;
+import com.civica.grads.boardgames.model.BoardPojo;
 import com.civica.grads.boardgames.model.Game;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -39,10 +41,11 @@ public class FetchDataGameDataService implements GameDataService {
      * @see com.civica.grads.boardgames.web.model.GameDataService#getCurrentBoard()
      */
     @Override
-    public Board getCurrentBoard() {
-        Board board = restTemplate.getForObject(storageServiceURL, Board.class);
+    public GameBoard getCurrentBoard() {
+        Board srcBoard = restTemplate.getForObject(storageServiceURL, BoardPojo.class);
 
         
-        return board;    }
+        return new GameBoard(srcBoard);   
+        }
 
 }

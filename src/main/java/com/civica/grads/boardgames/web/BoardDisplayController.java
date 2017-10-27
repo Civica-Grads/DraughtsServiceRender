@@ -19,7 +19,7 @@ public class BoardDisplayController {
     String renderBoard() throws GameException {
         
         StringBufferBoardRenderer boardRender = new StringBufferBoardRenderer();
-        boardRender.render(boardController.getBoard());
+        boardRender.render(boardController.getBoard()); 
         
         String pageHtml = String.format("<html><body><pre>%s</pre></body></html>", boardRender.asString());
         

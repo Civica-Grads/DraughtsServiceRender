@@ -2,7 +2,7 @@ package com.civica.grads.boardgames.web;
 
 import com.civica.grads.boardgames.enums.Colour;
 import com.civica.grads.boardgames.exceptions.GameException;
-import com.civica.grads.boardgames.model.Board;
+import com.civica.grads.boardgames.model.GameBoard;
 import com.civica.grads.boardgames.model.Counter;
 import com.civica.grads.boardgames.model.Position;
 
